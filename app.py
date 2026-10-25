@@ -83,5 +83,13 @@ def analyze():
             'missing_skills': ['Python', 'Cloud Deployment', 'System Design', 'Communication']
         })
 
+import webbrowser
+from threading import Timer
+
+def open_browser():
+    webbrowser.open_new('http://127.0.0.1:5000/')
+
 if __name__ == '__main__':
+    # Server start ayyaka 1 second lo automatic ga browser open avvadaniki
+    Timer(1, open_browser).start()
     app.run(debug=True)
